@@ -12,7 +12,7 @@ _You have **three hours** to complete this challenge. Plan your time accordingly
 
 ## Introduction
 
-This is a basic bookstore database scheme with books that have authors. Books may have many authors and many authors may have written many books. The relationship between books and authors is called `wrote`. Each book can be found in only one section of the bookstore. 
+This is a basic bookstore database scheme with books that have authors. Books may have many authors and many authors may have written many books. The relationship between books and authors is called `wrote`. Each book can be found in only one section of the bookstore.
 
 ### Commits
 
@@ -23,10 +23,13 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics.
 
 1. Explain exception handling in your application.
+  - using custom error handling we are able to show the client or user if there are any errors, where the errors are and how to fix them, but not in a way that exposes any flaws or important information.
 2. Explain your user authentication flow.
+  - Using PostMan, you get authenticated, after authenticated you are able to use CRUD functionality
 3. Explain your unit tests, including how they work and why they are important.
+  - We are making sure that the test will work how it is intended, and that there are no errors with our code.
 4. Explain how you deployed your application to a cloud service with a persistent database.
-
+  - Using Heroku CLI, created a DB and was able to deploy to the web. 
 ## Instructions
 
 ### Task 1: Project Set Up

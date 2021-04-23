@@ -176,13 +176,14 @@ public class BookControllerUnitTestNoDB
         String apiUrl = "/books/book/500";
         Mockito.when(bookService.findBookById(500))
                 .thenReturn(null);
+
         RequestBuilder requestBuilder = MockMvcRequestBuilders.get(apiUrl)
                 .accept(MediaType.APPLICATION_JSON);
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andReturn();
         String tr = result.getResponse()
                 .getContentAsString();
-        String er = " ";
+        String er = "";
         System.out.println(er);
         assertEquals(er, tr);
     }
@@ -217,8 +218,14 @@ public class BookControllerUnitTestNoDB
     }
 
     @Test
-    public void deleteBookById() throws
-            Exception
+    public void deleteBookById() throws Exception
     {
+        String apiUrl = "/books/book/{id}";
+        RequestBuilder requestBuilder = MockMvcRequestBuilders.delete(apiUrl, "13")
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON);
+        mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andDo(MockMvcResultHandlers.print());
     }
 }
