@@ -190,7 +190,10 @@ public class User
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         this.password = passwordEncoder.encode(password);
     }
-
+    public void setNoEncryptPassword(String password)
+    {
+        this.password = password;
+    }
     /**
      * Getter for the list of useremails for this user
      *

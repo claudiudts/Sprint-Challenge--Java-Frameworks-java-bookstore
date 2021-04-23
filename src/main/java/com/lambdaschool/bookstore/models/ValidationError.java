@@ -11,7 +11,7 @@ public class ValidationError
     private String Code;
 
     /**
-     * The message (String) fro the validation error
+     * The message (String) for the validation error
      */
     private String message;
 

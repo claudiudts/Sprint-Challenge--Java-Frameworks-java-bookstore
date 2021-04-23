@@ -13,8 +13,7 @@ import java.util.Optional;
  * if not which happens when seeding the database, use a default value
  */
 @Component
-public class UserAuditing
-        implements AuditorAware<String>
+public class UserAuditing implements AuditorAware<String>
 {
     /**
      * The current user
